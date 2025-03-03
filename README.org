@@ -1,30 +1,29 @@
-* AITranscribe : Record and transcribe audio via API
 #+HTML: <img src="header.webp" align="center">
+* AITranscribe : Record and transcribe audio via API
 This tool
-1. records audio via pw-record (pipewire)
-2. feeds it to ffmpeg to get a FLAC file
-3. sends it to the Groq via curl
-4. parses JSON with jq
+1. records audio via ~pw-record~ (pipewire)
+2. feeds it to ~ffmpeg~ to get a FLAC file
+3. sends it to the Groq API via ~curl~
+4. parses JSON with ~jq~
 And then, depending on what you chose, it does one of the following
-5. Copies it to the clipboard with xclip
-5. Inserts it via xdotool
+5. Copies it to the clipboard with ~xclip~
+5. Inserts it via ~xdotool~
 And at last,
-6. Sends notification via notify-send
+6. Sends notification via ~notify-send~
 
-Usage: Invoke script and start speaking.  When done, choose an option.
 
 ** Required Tools
 Requires the following tools:
-- xdotool
-- xclip
-- notify-send
-- ffmpeg
-- curl
-- pw-record (pipewire)
-- jq
+- ~xdotool~
+- ~xclip~
+- ~notify-send~
+- ~ffmpeg~
+- ~curl~
+- ~pw-record~ (pipewire)
+- ~jq~
 
 ** API Key
-You need to s/YOUR_API_KEY_HERE/[API key from https://console.groq.com/keys]/
+You need to s/YOUR_API_KEY_HERE/[ API key from https://console.groq.com/keys ]/
 
 ** Usage
-Bind it to a shortcut.
+Bind it to a shortcut.  Invoke script and start speaking.  When done, choose an option.
